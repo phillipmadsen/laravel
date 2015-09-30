@@ -25,3 +25,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+## Installation Setup 
+
+**RUN: composer update**
+
+### ADD TO CONFIG/APP.PHP
+
+        Collective\Html\HtmlServiceProvider::class,
+        //Laracasts\Flash\FlashServiceProvider::class,
+        //Mitul\Generator\GeneratorServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        yajra\Datatables\DatatablesServiceProvider::class,
+        Amsgames\LaravelShop\LaravelShopProvider::class,
+
+        'Datatables' => yajra\Datatables\Datatables::class,
+        //'Flash'     => Laracasts\Flash\Flash::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
+        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+        'Shop'      => Amsgames\LaravelShop\LaravelShopFacade::class,
+        
+        
+**RUN: php artisan vendor:publish**
+
+New Artisan commands available:
+
+* added new database tables:
+* added new factory:
+* added new seed files:
+* added main AdminLTE public sources:
+* Added edited app.blade.php and additional files for admin layout pages with admin theme:
